@@ -1,0 +1,9 @@
+<h1>Pets Encontrados</h1>
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li><h3><%= link_to pet.category, pet_path(pet) %></h3></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Reportar animal encontrado', new_pet_path, class: 'btn btn-primary' %>

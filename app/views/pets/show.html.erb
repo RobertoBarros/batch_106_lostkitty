@@ -1,0 +1,12 @@
+<h1>Informação do Pet</h1>
+
+<p><%= @pet.category %></p>
+<p>Descrição: <%= @pet.description %></p>
+<p>Encontrado em: <%= @pet.address %></p>
+<p>Na data: <%= @pet.found_at %></p>
+
+<p>
+  <%= link_to 'Ver Todos', pets_path, class: 'btn btn-default' %>
+  <%= link_to 'Editar', edit_pet_path(@pet), class: 'btn btn-warning' %>
+  <%= link_to 'Excluir', pet_path(@pet), method: 'delete', data: { confirm: "Quer mesmo excluir?" }, class: 'btn btn-danger' %>
+</p>
